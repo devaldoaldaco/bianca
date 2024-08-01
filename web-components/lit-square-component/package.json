@@ -1,0 +1,26 @@
+{
+  "name": "lit-square-component",
+  "version": "1.0.0",
+  "description": "This is a web component made with lit element library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "web-dev-server --node-resolve --open --watch"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "lit",
+    "lit-html",
+    "html",
+    "js"
+  ],
+  "author": "dev.aldo.aldaco@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "lit": "^3.1.4"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.4.6"
+  }
+}
