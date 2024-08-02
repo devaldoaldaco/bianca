@@ -1,18 +1,28 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, css } from 'lit';
 
 // Ya no usa puro JS, Ahora usaremos lit element para construir el componente
 export default class LitSquareComponent extends LitElement {
     static get properties() {
         return {
-            fullName: {type: Object},
-            listTodos: {type: Boolean}
+            color: { type: String },
+            size: { type: String }
         }
     }
 
     constructor() {
         super();
-        this.fullName = {name: 'ALDO', lastName: 'ALDACO'};// #FFF000
+    }
 
+    static get styles() {
+        return [
+            css`
+                section {
+                    height: 50px;
+                    width: 50px;
+                    background-color: black;
+                }
+            `
+        ]
     }
 
     changeNameValue() {
@@ -22,9 +32,7 @@ export default class LitSquareComponent extends LitElement {
     render() {
     //template tag literal function
         return html`
-            <h2>${this.fullName.name} ${this.fullName.lastName}</h2>
-            <button @click="${this.changeNameValue}">Cambiar valor del nombre</button>
-            <todo-list ?listTodos="${this.listTodos}"></todo-list>
+            <section style="background-color: ${this.color}; height: ${this.size}; width: ${this.size}"></section>
         `;
         // data binding
     }
